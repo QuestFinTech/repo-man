@@ -29,3 +29,4 @@ go.work.sum
 
 # Build
 /build/
+/go.sum
