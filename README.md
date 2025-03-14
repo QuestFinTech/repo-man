@@ -69,4 +69,4 @@ make clean
 
 ---
 
-Feel free to explore and make changes as needed! 😊
+Feel free to explore 😊
