@@ -1,15 +1,18 @@
 # Define variables
+SOURCE_DIR = ./cmd/server
 BUILD_DIR = build
 DATA_DIR = $(BUILD_DIR)/data
+EXECUTABLE = repo-man
 
 # Target to compile and build the project
 build:
 	mkdir -p $(DATA_DIR)
-	go build -o $(BUILD_DIR)/
+	go build -o $(BUILD_DIR)/$(EXECUTABLE) ./cmd/server
 
-# Target to run the built executable
+# Target to run the built executable from within the build directory
 run: build
-	./$(BUILD_DIR)/repository_manager
+	cd $(BUILD_DIR) && ./$(EXECUTABLE)
+
 
 # Target to clean up the build directory
 clean:
